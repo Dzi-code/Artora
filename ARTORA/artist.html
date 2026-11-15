@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sell Your Art | ARTORA</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="logo"> ART<span>ORA</span> </a>
+
+        <nav class="nav-links">
+          <a href="shop.html"> Shop </a>
+
+          <a href="index.html#artists"> Artists </a>
+
+          <a href="admin.html"> Admin </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow"> SELL ON ARTORA </span>
+
+          <h1>Turn your art into a business.</h1>
+
+          <p>Upload your paintings and reach collectors around the world.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container dashboard-layout">
+          <aside class="dashboard-sidebar">
+            <h3>Artist Dashboard</h3>
+
+            <a class="active"> Overview </a>
+
+            <a> My Artwork </a>
+
+            <a> Orders </a>
+
+            <a> Earnings </a>
+
+            <a> Profile </a>
+          </aside>
+
+          <div class="dashboard-content">
+            <div class="dashboard-header">
+              <div>
+                <h2>Welcome, Artist</h2>
+
+                <p class="muted">Manage your artwork and sales.</p>
+              </div>
+
+              <button class="btn btn-dark" onclick="openUpload()">
+                + Upload Artwork
+              </button>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span>Total Sales</span>
+
+                <strong> $12,450 </strong>
+              </div>
+
+              <div class="stat-card">
+                <span>Orders</span>
+
+                <strong> 28 </strong>
+              </div>
+
+              <div class="stat-card">
+                <span>Artwork</span>
+
+                <strong> 17 </strong>
+              </div>
+
+              <div class="stat-card">
+                <span>Pending</span>
+
+                <strong> 3 </strong>
+              </div>
+            </div>
+
+            <h3>Your Artwork</h3>
+
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Artwork</th>
+
+                    <th>Price</th>
+
+                    <th>Status</th>
+
+                    <th>Sales</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Golden Horizon</td>
+
+                    <td>$850</td>
+
+                    <td>
+                      <span class="status approved"> Approved </span>
+                    </td>
+
+                    <td>4</td>
+                  </tr>
+
+                  <tr>
+                    <td>Ocean Dreams</td>
+
+                    <td>$650</td>
+
+                    <td>
+                      <span class="status approved"> Approved </span>
+                    </td>
+
+                    <td>2</td>
+                  </tr>
+
+                  <tr>
+                    <td>Morning Light</td>
+
+                    <td>$1,200</td>
+
+                    <td>
+                      <span class="status pending"> Pending </span>
+                    </td>
+
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- UPLOAD MODAL -->
+
+    <div id="uploadModal" class="modal">
+      <div class="modal-content large">
+        <button class="modal-close" onclick="closeUpload()">×</button>
+
+        <h2>Upload Artwork</h2>
+
+        <form onsubmit="submitArtwork(event)">
+          <label> Artwork Title </label>
+
+          <input id="artTitle" required placeholder="e.g. Golden Horizon" />
+
+          <label> Price </label>
+
+          <input id="artPrice" type="number" required placeholder="850" />
+
+          <label> Category </label>
+
+          <select id="artCategory">
+            <option>Abstract</option>
+
+            <option>Portrait</option>
+
+            <option>Landscape</option>
+
+            <option>Modern</option>
+          </select>
+
+          <label> Medium </label>
+
+          <input id="artMedium" placeholder="Oil on canvas" />
+
+          <label> Description </label>
+
+          <textarea
+            id="artDescription"
+            rows="5"
+            placeholder="Tell collectors about your artwork..."></textarea>
+
+          <label> Artwork Image </label>
+
+          <input id="artImage" type="file" accept="image/*" required />
+
+          <button class="btn btn-dark full">Submit Artwork</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

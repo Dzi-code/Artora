@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Original Art | ARTORA</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="logo"> ART<span>ORA</span> </a>
+        <div class="search-box">
+          <input
+            id="shopSearch"
+            type="text"
+            placeholder="Search artwork..."
+            onkeyup="filterArtwork()" />
+          <button>⌕</button>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="index.html#artists"> Artists </a>
+          <a href="artist.html"> Sell Art </a>
+          <button class="icon-button" onclick="openCart()">
+            🛒 <span id="cartCount">0</span>
+          </button>
+          <button class="login-button" onclick="openLogin()">Login</button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow"> THE COLLECTION </span>
+          <h1>Shop Original Artwork</h1>
+          <p>Discover paintings from independent artists.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container shop-layout">
+          <aside class="filters">
+            <h3>Filter</h3>
+            <label> Category </label>
+            <select id="categoryFilter" onchange="filterArtwork()">
+              <option value="all">All Categories</option>
+              <option value="abstract">Abstract</option>
+              <option value="portrait">Portrait</option>
+              <option value="landscape">Landscape</option>
+              <option value="modern">Modern</option>
+            </select>
+            <label> Maximum price </label>
+            <input
+              type="range"
+              id="priceFilter"
+              min="100"
+              max="5000"
+              value="5000"
+              oninput="filterArtwork()" />
+            <div class="range-value">
+              Up to $<span id="priceValue"> 5000 </span>
+            </div>
+            <label> Sort by </label>
+            <select id="sortFilter" onchange="filterArtwork()">
+              <option value="featured">Featured</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+            </select>
+          </aside>
+          <div class="shop-results">
+            <div class="results-header">
+              <span id="resultCount"> 12 artworks </span>
+            </div>
+            <div id="shopGrid" class="art-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

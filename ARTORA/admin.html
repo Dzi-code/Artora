@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard | ARTORA</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="logo"> ART<span>ORA</span> </a>
+
+        <nav class="nav-links">
+          <a href="index.html"> Store </a>
+
+          <a href="shop.html"> Artwork </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="dashboard-header">
+          <div>
+            <span class="eyebrow"> ADMINISTRATION </span>
+
+            <h1>Marketplace Dashboard</h1>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span>Total Sales</span>
+
+            <strong> $284,500 </strong>
+          </div>
+
+          <div class="stat-card">
+            <span>Commission</span>
+
+            <strong> $28,450 </strong>
+          </div>
+
+          <div class="stat-card">
+            <span>Artists</span>
+
+            <strong> 1,248 </strong>
+          </div>
+
+          <div class="stat-card">
+            <span>Customers</span>
+
+            <strong> 8,492 </strong>
+          </div>
+        </div>
+
+        <div class="admin-grid">
+          <div class="admin-panel">
+            <div class="panel-heading">
+              <h2>Pending Artwork</h2>
+
+              <span> 12 pending </span>
+            </div>
+
+            <div class="approval-item">
+              <img
+                src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=200&q=80" />
+
+              <div>
+                <h4>Blue Dreams</h4>
+
+                <p>Sofia Adeyemi</p>
+              </div>
+
+              <div class="approval-buttons">
+                <button class="approve" onclick="approveArtwork(this)">
+                  Approve
+                </button>
+
+                <button class="reject" onclick="rejectArtwork(this)">
+                  Reject
+                </button>
+              </div>
+            </div>
+
+            <div class="approval-item">
+              <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=200&q=80" />
+
+              <div>
+                <h4>The Wanderer</h4>
+
+                <p>Marcus Cole</p>
+              </div>
+
+              <div class="approval-buttons">
+                <button class="approve" onclick="approveArtwork(this)">
+                  Approve
+                </button>
+
+                <button class="reject" onclick="rejectArtwork(this)">
+                  Reject
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-panel">
+            <div class="panel-heading">
+              <h2>Marketplace Commission</h2>
+            </div>
+
+            <div class="commission-setting">
+              <label> Current commission </label>
+
+              <div class="commission-input">
+                <input
+                  type="number"
+                  id="commission"
+                  value="10"
+                  min="0"
+                  max="50" />
+
+                <span> % </span>
+              </div>
+
+              <button class="btn btn-dark" onclick="saveCommission()">
+                Save
+              </button>
+            </div>
+
+            <div class="commission-info">
+              <p>
+                Artist receives
+                <strong> 90% </strong>
+              </p>
+
+              <p>
+                Marketplace receives
+                <strong> 10% </strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

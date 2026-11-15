@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ARTORA - Discover and buy original paintings from independent artists." />
+    <title>ARTORA | Original Art Marketplace</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="logo"> ART<span>ORA</span> </a>
+        <div class="search-box">
+          <input
+            type="text"
+            id="globalSearch"
+            placeholder="Search paintings, artists..." />
+          <button onclick="searchArtwork()">⌕</button>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a> <a href="#artists">Artists</a>
+          <a href="artist.html">Sell Art</a>
+          <button class="icon-button" onclick="openCart()">
+            🛒 <span id="cartCount">0</span>
+          </button>
+          <button class="login-button" onclick="openLogin()">Login</button>
+        </nav>
+        <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+      </div>
+      <div id="mobileNav" class="mobile-nav">
+        <a href="shop.html">Shop</a> <a href="#artists">Artists</a>
+        <a href="artist.html">Sell Your Art</a> <a href="admin.html">Admin</a>
+        <button onclick="openLogin()">Login</button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content container">
+          <div class="hero-text">
+            <span class="eyebrow"> ORIGINAL ART • INDEPENDENT ARTISTS </span>
+            <h1>Art that makes <em>your space</em> feel like home.</h1>
+            <p>
+              Discover original paintings created by talented artists from
+              around the world.
+            </p>
+            <div class="hero-buttons">
+              <a href="shop.html" class="btn btn-dark"> Explore Artwork </a>
+              <a href="artist.html" class="btn btn-outline"> Sell Your Art </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-card">
+              <img
+                src="https://images.unsplash.com/photo-1577083552431-6e5fd01988d5?auto=format&fit=crop&w=900&q=85"
+                alt="Abstract artwork" />
+              <div class="floating-card">
+                <span>Featured Artwork</span> <strong>Golden Horizon</strong>
+                <small>by Elena Martins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="categories section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">EXPLORE</span>
+              <h2>Find your style</h2>
+            </div>
+            <a href="shop.html" class="view-link"> View all → </a>
+          </div>
+          <div class="category-grid">
+            <a href="shop.html?category=abstract" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600&q=80"
+                alt="Abstract art" />
+              <div>
+                <h3>Abstract</h3>
+                <span>Explore collection</span>
+              </div>
+            </a>
+            <a href="shop.html?category=portrait" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80"
+                alt="Portrait art" />
+              <div>
+                <h3>Portraits</h3>
+                <span>Explore collection</span>
+              </div>
+            </a>
+            <a href="shop.html?category=landscape" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=600&q=80"
+                alt="Landscape art" />
+              <div>
+                <h3>Landscapes</h3>
+                <span>Explore collection</span>
+              </div>
+            </a>
+            <a href="shop.html?category=modern" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1577083552431-6e5fd01988d5?auto=format&fit=crop&w=600&q=80"
+                alt="Modern art" />
+              <div>
+                <h3>Modern</h3>
+                <span>Explore collection</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="featured section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">CURATED FOR YOU</span>
+              <h2>Featured artwork</h2>
+            </div>
+            <a href="shop.html" class="view-link"> Shop all → </a>
+          </div>
+          <div id="featuredGrid" class="art-grid"></div>
+        </div>
+      </section>
+      <section id="artists" class="artists-section section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">MEET THE CREATORS</span>
+              <h2>Featured artists</h2>
+            </div>
+          </div>
+          <div class="artist-grid">
+            <div class="artist-card">
+              <div class="artist-avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80"
+                  alt="Artist" />
+              </div>
+              <h3>Elena Martins</h3>
+              <p>Abstract & Contemporary</p>
+              <a href="shop.html" class="text-button"> View artwork → </a>
+            </div>
+            <div class="artist-card">
+              <div class="artist-avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  alt="Artist" />
+              </div>
+              <h3>Marcus Cole</h3>
+              <p>Landscape & Nature</p>
+              <a href="shop.html" class="text-button"> View artwork → </a>
+            </div>
+            <div class="artist-card">
+              <div class="artist-avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                  alt="Artist" />
+              </div>
+              <h3>Sofia Adeyemi</h3>
+              <p>Portrait & Figurative</p>
+              <a href="shop.html" class="text-button"> View artwork → </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="artist-cta">
+        <div class="container artist-cta-content">
+          <div>
+            <span class="eyebrow">ARE YOU AN ARTIST?</span>
+            <h2>Turn your creativity into a business.</h2>
+            <p>
+              Join thousands of independent artists selling original artwork to
+              collectors around the world.
+            </p>
+          </div>
+          <a href="artist.html" class="btn btn-light"> Start Selling </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo footer-logo" href="index.html">
+            ART<span>ORA</span>
+          </a>
+          <p>
+            A marketplace connecting artists with people who love original art.
+          </p>
+        </div>
+        <div>
+          <h4>Marketplace</h4>
+          <a href="shop.html">Shop</a> <a href="#">Artists</a>
+          <a href="#">New Arrivals</a> <a href="#">Featured</a>
+        </div>
+        <div>
+          <h4>Artists</h4>
+          <a href="artist.html">Sell Your Art</a>
+          <a href="#">Artist Guidelines</a> <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <a href="#">Contact</a> <a href="#">Shipping</a>
+          <a href="#">Returns</a> <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ARTORA. All rights reserved.</div>
+    </footer>
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeLogin()">×</button>
+        <h2>Welcome back</h2>
+        <p class="muted">Login to your ARTORA account.</p>
+        <form onsubmit="loginUser(event)">
+          <label>Email</label>
+          <input
+            type="email"
+            id="loginEmail"
+            required
+            placeholder="you@example.com" />
+          <label>Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            required
+            placeholder="••••••••" />
+          <button class="btn btn-dark full">Login</button>
+        </form>
+        <p class="modal-switch">
+          Don't have an account?
+          <a href="#" onclick="showRegister()"> Create one </a>
+        </p>
+      </div>
+    </div>
+    <!-- CART DRAWER -->
+    <div id="cartOverlay" class="overlay" onclick="closeCart()"></div>
+    <aside id="cartDrawer" class="cart-drawer">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button onclick="closeCart()">×</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span> <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="btn btn-dark full" onclick="checkout()">
+          Proceed to Checkout
+        </button>
+      </div>
+    </aside>
+    <script src="js/app.js"></script>
+  </body>
+</html>
